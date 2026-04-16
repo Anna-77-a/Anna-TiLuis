@@ -1,0 +1,30 @@
+﻿using System;
+
+class Program
+{
+    static void Main()
+    {
+        Random random = new Random();
+
+        Console.WriteLine("🎲 JOGO DE DADO 🎲");
+
+        int jogador1 = random.Next(1, 7);
+        int jogador2 = random.Next(1, 7);
+
+        Console.WriteLine("Jogador 1 tirou: " + jogador1);
+        Console.WriteLine("Jogador 2 tirou: " + jogador2);
+
+        if (jogador1 > jogador2)
+        {
+            Console.WriteLine("🏆 Jogador 1 venceu!");
+        }
+        else if (jogador2 > jogador1)
+        {
+            Console.WriteLine("🏆 Jogador 2 venceu!");
+        }
+        else
+        {
+            Console.WriteLine("🤝 Empate!");
+        }
+    }
+}

@@ -1,0 +1,53 @@
+﻿using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Nome do herói e vilão
+        string nomeHeroi = "Arnnades";
+        string nomeVilao = "Ordenis";
+
+        // Ataque base e bônus da arma
+        int ataqueBase = 77;
+        int bonusArma = 73;
+        int ataqueTotal = ataqueBase + bonusArma;
+
+        // Vida do inimigo e dano causado
+        double vidaInimigo = 150.0;
+        double danoCausado = vidaInimigo - 35.0; // deixa o vilão com 35 de vida
+        double vidaRestante = vidaInimigo - danoCausado;
+
+        // Moedas antes e depois do bônus
+        float moedas = 700f;
+        var moedasFinais = moedas * 2f;
+
+        // Experiência
+        long experienciaTotal = 700000;
+        long mediaXP = experienciaTotal / 2;
+
+        // Se entendeu a matéria
+        bool entendiMateria = false;
+
+        // Mostrar tudo na tela
+        Console.WriteLine("===== AVENTURA DE RPG =====\n");
+
+        Console.WriteLine($"{nomeHeroi} vai lutar contra {nomeVilao}!");
+        Console.WriteLine($"Ataque base: {ataqueBase}, Bônus da arma: {bonusArma}");
+        Console.WriteLine($"Ataque total: {ataqueTotal}\n");
+
+        Console.WriteLine($"{nomeHeroi} ataca {nomeVilao} e causa {danoCausado} de dano!");
+        Console.WriteLine($"Vida restante de {nomeVilao}: {vidaRestante}\n");
+
+        Console.WriteLine($"{nomeHeroi} encontra moedas e seu tesouro dobra! Total: {moedasFinais}\n");
+
+        Console.WriteLine($"Experiência total: {experienciaTotal}");
+        Console.WriteLine($"Média de XP por nível: {mediaXP}\n");
+
+        // Mostrar "mais ou menos" se entendeu a matéria
+        string materia = entendiMateria ? "sim" : "mais ou menos";
+        Console.WriteLine($"Você entendeu a matéria? {materia}\n");
+
+        Console.WriteLine("Fim da aventura! Parabéns, herói!");
+    }
+}
